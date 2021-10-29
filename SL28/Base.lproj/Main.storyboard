@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SL28" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hj7-yx-7JB" userLabel="Welcome Stack View">
+                                <rect key="frame" x="35" y="78" width="203" height="70.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Välkommen!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHx-RG-zOS">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
+                                        <color key="textColor" name="Text Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vad vill du göra idag?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9j-ca-fm9">
+                                        <rect key="frame" x="0.0" y="44.5" width="203" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="3X0-1H-76D">
+                                <rect key="frame" x="15" y="197" width="384" height="170.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDU-Bt-Io4" userLabel="New Order View">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="170.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMZ-BY-YPp">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="170.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Beställ" titleAlignment="center">
+                                                    <backgroundConfiguration key="background"/>
+                                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                    <color key="baseBackgroundColor" name="Button Color"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="orderButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbx-5R-3pi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Button Color"/>
+                                        <constraints>
+                                            <constraint firstItem="jMZ-BY-YPp" firstAttribute="top" secondItem="mDU-Bt-Io4" secondAttribute="top" id="DG1-bJ-SYJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="jMZ-BY-YPp" secondAttribute="bottom" id="d0x-f5-6x8"/>
+                                            <constraint firstItem="jMZ-BY-YPp" firstAttribute="leading" secondItem="mDU-Bt-Io4" secondAttribute="leading" id="xRk-06-Cg8"/>
+                                            <constraint firstAttribute="trailing" secondItem="jMZ-BY-YPp" secondAttribute="trailing" id="yVb-WB-c9W"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Background Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3X0-1H-76D" secondAttribute="trailing" constant="15" id="6P0-tD-b6Q"/>
+                            <constraint firstItem="Hj7-yx-7JB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="DdA-Sm-wuQ"/>
+                            <constraint firstItem="3X0-1H-76D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Oub-D1-Y7A"/>
+                            <constraint firstItem="3X0-1H-76D" firstAttribute="top" secondItem="Hj7-yx-7JB" secondAttribute="bottom" constant="48.5" id="YNR-RY-ot6"/>
+                            <constraint firstItem="Hj7-yx-7JB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="yYL-vG-VsB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background Color">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Button Color">
+            <color red="0.20784313725490197" green="0.53725490196078429" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text Color">
+            <color red="0.13725490196078433" green="0.13333333333333333" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

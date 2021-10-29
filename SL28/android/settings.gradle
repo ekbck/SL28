@@ -1,0 +1,3 @@
+rootProject.name = 'SL28'
+
+include ':app'

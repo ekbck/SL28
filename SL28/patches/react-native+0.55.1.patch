@@ -1,0 +1,36 @@
+diff --git a/node_modules/react-native/Libraries/WebSocket/RCTReconnectingWebSocket.m b/node_modules/react-native/Libraries/WebSocket/RCTReconnectingWebSocket.m
+index 04e5dee..d3bfb96 100644
+--- a/node_modules/react-native/Libraries/WebSocket/RCTReconnectingWebSocket.m
++++ b/node_modules/react-native/Libraries/WebSocket/RCTReconnectingWebSocket.m
+@@ -9,7 +9,7 @@
+ 
+ #import <React/RCTConvert.h>
+ #import <React/RCTDefines.h>
+-#import <fishhook/fishhook.h>
++#import <fishhook.h>
+ 
+ #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 110000 /* __IPHONE_11_0 */
+ #import <os/log.h>
+diff --git a/node_modules/react-native/React/CxxBridge/RCTCxxBridge.mm b/node_modules/react-native/React/CxxBridge/RCTCxxBridge.mm
+index 7411dcd..59be715 100644
+--- a/node_modules/react-native/React/CxxBridge/RCTCxxBridge.mm
++++ b/node_modules/react-native/React/CxxBridge/RCTCxxBridge.mm
+@@ -631,7 +631,7 @@ struct RCTInstanceCallback : public InstanceCallback {
+   }
+ }
+ 
+-- (void)_initModules:(NSArray<id<RCTBridgeModule>> *)modules
++- (void)_initModules:(NSArray<Class> *)modules
+    withDispatchGroup:(dispatch_group_t)dispatchGroup
+     lazilyDiscovered:(BOOL)lazilyDiscovered
+ {
+diff --git a/node_modules/react-native/ReactCommon/yoga/yoga.podspec b/node_modules/react-native/ReactCommon/yoga/yoga.podspec
+index c38f4c0..0d67f6a 100644
+--- a/node_modules/react-native/ReactCommon/yoga/yoga.podspec
++++ b/node_modules/react-native/ReactCommon/yoga/yoga.podspec
+@@ -41,4 +41,5 @@ Pod::Spec.new do |spec|
+   source_files = 'yoga/**/*.{cpp,h}'
+   source_files = File.join('ReactCommon/yoga', source_files) if ENV['INSTALL_YOGA_WITHOUT_PATH_OPTION']
+   spec.source_files = source_files
++  spec.public_header_files = 'yoga/Yoga.h', 'yoga/YGEnums.h', 'yoga/YGMacros.h'
+ end
